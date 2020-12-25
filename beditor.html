@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>BEditor</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="modifier">
+            <ul class="tool-list">
+                <li class="tool">
+                    <button
+                    type="button"
+                    data-command="bold"
+                    class="tool--btn">
+                    <i class=' fas fa-bold'></i>
+                </button>
+                </li>
+                <li class="tool">
+                    <button
+                    type="button"
+                    data-command="italic"
+                    class="tool--btn">
+                    <i class=' fas fa-italic'></i>
+                    </button>
+                </li>
+                <li class="tool">
+                    <button
+                    type="button"
+                    data-command="underline"
+                    class="tool--btn">
+                    <i class=' fas fa-underline'></i>
+                    </button>
+                </li>
+                <li class="tool">
+                    <button
+                    type="button"
+                    data-command="insertOrderedList"
+                    class="tool--btn">
+                    <i class=' fas fa-list-ol'></i>
+                    </button>
+                </li>
+                <li class="tool">
+                    <button
+                    type="button"
+                    data-command="insertUnorderedList"
+                    class="tool--btn">
+                    <i class=' fas fa-list-ul'></i>
+                    </button>
+                </li>
+                <li class="tool">
+                    <button
+                    type="button"
+                    data-command="createlink"
+                    class="tool--btn">
+                    <i class=' fas fa-link'></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <div class="editor">
+            <div class="top">
+                <p>></p>
+                <div id="heading" contenteditable="true"></div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div id="content" contenteditable="true" onkeyup="countWords()"></div>
+
+        </div>
+
+        <span class="words-count"></span>
+
+        <script src="index.js" type="text/javascript"></script>
+        <script src="modifier.js" type="text/javascript"></script>
+
+        <script >
+        function countWords() {
+            var words = document.getElementById("content").value;
+            var count = 0
+            var i
+            var split = words.split(' ');
+            for (i = 0; i < split.length; i++) {
+                if (split[i] != "") {
+                    count+=1
+                }
+            }
+        }
+        </script>
+    </body>
+
+</html>

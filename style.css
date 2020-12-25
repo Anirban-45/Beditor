@@ -1,0 +1,91 @@
+html {
+    font-family: "Helevetica", sans-serif;
+}
+
+body {
+    color: #fefefe;
+    font-weight: 100;
+    background-color: #333333;
+    display: flex;
+}
+
+.modifier {
+    padding-top: 15px;
+    padding-right: 20px;
+}
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+.toolbar {}
+.tool-list {
+	display: flex;
+    flex-direction: column;
+	list-style: none;
+	padding: 0;
+	margin: 1rem;
+	overflow: hidden;
+}
+.tool {}
+.tool--btn {
+	display: block;
+	border: none;
+	padding: .5rem;
+    font-size: 15px;
+    color: #fefefe;
+    background-color: #333333;
+    width: 30px;
+}
+
+#output {
+	height: 400px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	margin: 1rem;
+	padding: 1rem;
+}
+
+.editor {
+    margin: 0 auto;
+    max-width: 55em;
+}
+
+.top {
+    display: flex;
+    font-size: 25;
+}
+
+.top p {
+    margin-top: 35px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+
+.divider {
+    width: 55em;
+    height: 1px;
+    background-color: #585858;
+    margin-top: 6px;
+    margin-bottom: 10px;
+}
+div:focus {
+    outline: none;
+}
+
+#heading {
+    font-size: 40px;
+    padding-top: 26px;
+}
+
+#content {
+    padding-top: 10px;
+    font-size: 24px;
+}
+
+.words-count {
+    height: 18px;
+    width: 90px;
+    background-color: #252525;
+    color: #fefefe;
+    border-radius: 2px;
+}
